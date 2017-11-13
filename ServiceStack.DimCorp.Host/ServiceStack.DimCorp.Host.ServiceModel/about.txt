@@ -1,0 +1,6 @@
+Contains all DTO's, keeping them isolated.
+Logic, implementation, dependency free.
+It's only a service contract.
+
+//TODO: mark all request DTOs with : IReturn<ResponseDto>
+it allows to use simplified client

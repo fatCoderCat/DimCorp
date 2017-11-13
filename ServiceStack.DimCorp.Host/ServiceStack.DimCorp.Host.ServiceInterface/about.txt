@@ -1,0 +1,2 @@
+Implementation project. 
+In small and medium project business logic and services live here.

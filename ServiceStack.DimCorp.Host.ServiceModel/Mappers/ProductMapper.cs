@@ -7,15 +7,6 @@ namespace ServiceStack.DimCorp.Host.ServiceModel.Mappers
 {
     public class ProductMapper : IProductMapper
     {
-        static ProductMapper()
-        {
-            Mapper.Initialize(cfg => cfg.CreateMap<Status, Core.Status>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Core.Status, Status>());
-            Mapper.Initialize(cfg => cfg.CreateMap<CreateProduct, Core.Product>());
-            Mapper.Initialize(cfg => cfg.CreateMap<UpdateProduct, Core.Product>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Core.Product, ProductResponse>());
-        }
-
         public Core.Product ToProduct(CreateProduct request)
         {
             return Mapper.Map<Core.Product>(request);

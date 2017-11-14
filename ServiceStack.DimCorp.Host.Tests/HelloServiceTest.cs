@@ -1,19 +1,19 @@
 ﻿using System;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ServiceStack.Testing;
 using ServiceStack.DimCorp.Host.ServiceModel;
 using ServiceStack.DimCorp.Host.ServiceInterface;
 
 namespace ServiceStack.DimCorp.Host.Tests
 {
-    [TestFixture]
-    public class UnitTests
+    [TestClass]
+    public class UnitTests : IDisposable
     {
-        private readonly ServiceStackHost appHost;
+        private readonly ServiceStackHost _appHost;
 
         public UnitTests()
         {
-            appHost = new BasicAppHost(typeof(MyServices).Assembly)
+            _appHost = new BasicAppHost(typeof(MyServices).Assembly)
             {
                 ConfigureContainer = container =>
                 {
@@ -22,21 +22,20 @@ namespace ServiceStack.DimCorp.Host.Tests
             }
             .Init();
         }
-
-        [OneTimeTearDown]
-        public void TestFixtureTearDown()
-        {
-            appHost.Dispose();
-        }
-
-        [Test]
+        
+        [TestMethod]
         public void Test_Method1()
         {
-            var service = appHost.Container.Resolve<MyServices>();
+            var service = _appHost.Container.Resolve<MyServices>();
 
             var response = (HelloResponse)service.Any(new Hello { Name = "World" });
 
-            Assert.That(response.Result, Is.EqualTo("Hello, World!"));
+            Assert.AreEqual(response.Result, "Hello, World!");
+        }
+
+        public void Dispose()
+        {
+            _appHost.Dispose();
         }
     }
 }

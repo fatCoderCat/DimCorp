@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceStack.DimCorp.Core\ServiceStack.DimCorp.Core.csproj" />
+    <ProjectReference Include="..\ServiceStack.DimCorp.Dal\ServiceStack.DimCorp.Dal.csproj" />
+    <ProjectReference Include="..\ServiceStack.DimCorp.Host.ServiceInterface\ServiceStack.DimCorp.Host.ServiceInterface.csproj" />
+    <ProjectReference Include="..\ServiceStack.DimCorp.Host.ServiceModel\ServiceStack.DimCorp.Host.ServiceModel.csproj" />
+  </ItemGroup>
+
+</Project>

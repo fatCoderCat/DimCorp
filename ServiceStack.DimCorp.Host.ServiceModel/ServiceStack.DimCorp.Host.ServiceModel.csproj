@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.0" />
+    <PackageReference Include="ServiceStack.Interfaces.Core" Version="1.0.44" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ServiceStack.DimCorp.Core\ServiceStack.DimCorp.Core.csproj" />
   </ItemGroup>
 

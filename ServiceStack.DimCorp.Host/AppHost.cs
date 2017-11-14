@@ -1,15 +1,13 @@
-﻿using System;
+﻿using AutoMapper;
 using Funq;
 using ServiceStack.Caching;
-using ServiceStack.Caching.Memcached;
+//using ServiceStack.Caching.Memcached; //Check availability at core version
 using ServiceStack.DimCorp.Dal;
 using ServiceStack.DimCorp.Host.ServiceInterface;
 using ServiceStack.DimCorp.Host.ServiceModel;
 using ServiceStack.DimCorp.Host.ServiceModel.Mappers;
 using ServiceStack.DimCorp.Host.Validation;
-using ServiceStack.Host;
 using ServiceStack.Validation;
-using ServiceStack.Web;
 
 namespace ServiceStack.DimCorp.Host
 {

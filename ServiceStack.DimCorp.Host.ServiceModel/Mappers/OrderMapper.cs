@@ -5,18 +5,6 @@ namespace ServiceStack.DimCorp.Host.ServiceModel.Mappers
 {
     public class OrderMapper : IOrderMapper
     {
-        static OrderMapper()
-        {
-            Mapper.Initialize(cfg => cfg.CreateMap<Core.Status, Status>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Status, Core.Status>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Order, Core.Order>());
-            Mapper.Initialize(cfg => cfg.CreateMap<OrderItem, Core.OrderItem>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Product, Core.Product>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Core.Order, OrderResponse>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Core.OrderItem, OrderItemResponse>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Core.Product, ProductResponse>());
-        }
-
         public Core.Order ToOrder(Order request)
         {
             return Mapper.Map<Core.Order>(request);

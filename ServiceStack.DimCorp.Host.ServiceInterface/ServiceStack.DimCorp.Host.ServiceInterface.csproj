@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ServiceStack.Core" Version="1.0.44" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceStack.DimCorp.Core\ServiceStack.DimCorp.Core.csproj" />
+    <ProjectReference Include="..\ServiceStack.DimCorp.Dal\ServiceStack.DimCorp.Dal.csproj" />
+    <ProjectReference Include="..\ServiceStack.DimCorp.Host.ServiceModel\ServiceStack.DimCorp.Host.ServiceModel.csproj" />
+  </ItemGroup>
+
+</Project>
